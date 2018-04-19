@@ -13,10 +13,10 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <h5>Игра "угадай число"</h5>
 <!--<form action="gameNumeric_handler.php" method="post">-->
-<form method="post">
+<form method="post" class="form-horizontal">
     <div class="form-group">
         <label for="exampleInputEmail1">Введите число</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ваше число" name="number">
+        <input type="text" class="form-control" placeholder="ваше число" name="number">
     </div>
     <button type="submit" class="btn btn-default" name="go">Submit</button>
 </form>
