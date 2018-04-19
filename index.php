@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-<script src="assets/jquery-3.2.1.js"></script>
+<script src="assets/jquery-3.3.1.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
@@ -20,16 +20,15 @@ if (isset($_POST['go']) && is_numeric($_POST['number']))
     echo $_POST['number'].'<br>';
     $getNumber = $_POST['number'];
     $rand = mt_rand(5,8);
+    echo 'rand = '.$rand.'<br>';
     if ($getNumber < 5)
         echo 'Small number<br>';
     elseif ($getNumber > 8)
         echo 'Big number<br>';
     elseif ($getNumber == $rand)
         echo 'Вы угадали число<br> <a href="gameNumeric.php">Играть еще</a>';
-    elseif ($getNumber != $rand && $getNumber > 5 && $getNumber < 8)
-        echo ' Не угадали. Попробуйте еще. <br> <a href="gameNumeric.php">Играть еще</a>';
     else
-        echo 'Other variant.<br>';
+        echo ' Не угадали. Попробуйте еще. <br> <a href="gameNumeric.php">Играть еще</a>';
 }
 else
 {

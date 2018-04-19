@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-<script src="assets/jquery-3.2.1.js"></script>
+<script src="assets/jquery-3.3.1.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <h5>Игра "угадай число"</h5>
 <!--<form action="gameNumeric_handler.php" method="post">-->
