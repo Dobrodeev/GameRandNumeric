@@ -15,23 +15,27 @@
 </html>
 <?php
 include 'form.php';
-if (isset($_POST['go']) && is_numeric($_POST['number']))
+if (isset($_POST['go']))
 {
-    echo $_POST['number'].'<br>';
-    $getNumber = $_POST['number'];
-    $rand = mt_rand(5,8);
-    echo 'rand = '.$rand.'<br>';
-    if ($getNumber < 5)
-        echo 'Small number<br>';
-    elseif ($getNumber > 8)
-        echo 'Big number<br>';
-    elseif ($getNumber == $rand)
-        echo 'Вы угадали число<br> <a href="gameNumeric.php">Играть еще</a>';
+    if (($_POST['number']!=='') && is_numeric($_POST['number'])) 
+    {
+        echo $_POST['number'].'<br>';
+        $getNumber = $_POST['number'];
+        $rand = mt_rand(5,8);
+        echo 'rand = '.$rand.'<br>';
+        if ($getNumber < 5)
+            echo 'Small number<br>';
+        elseif ($getNumber > 8)
+            echo 'Big number<br>';
+        elseif ($getNumber == $rand)
+            echo 'Вы угадали число<br> <a href="index.php">Играть еще</a>';
+        else
+            echo ' Не угадали. Попробуйте еще. <br> <a href="index.php">Играть еще</a>';
+    }
     else
-        echo ' Не угадали. Попробуйте еще. <br> <a href="gameNumeric.php">Играть еще</a>';
+    {
+        echo 'Введите чило, а не букву. <br>';
+    } 
 }
-else
-{
-    echo 'Введите чило, а не букву. <br>';
-}
+
 ?>
